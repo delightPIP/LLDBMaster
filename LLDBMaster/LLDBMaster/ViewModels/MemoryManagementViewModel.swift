@@ -26,7 +26,7 @@ class MemoryManagementViewModel: ObservableObject {
         let objB = CircularReferenceB()
         
         objA.referenceB = objB
-        objB.referenceA = objA // 순환 참조 생성!
+        objB.referenceA = objA // 순환 참조 생성! 문제가 되는 코드임
         
         circularObjects.append(objA)
         createdObjectsCount += 2
