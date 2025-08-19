@@ -89,6 +89,12 @@ struct BasicDebuggingView: View {
     private func incrementCounter() {
         counter += 1 // po counter, expr counter = 10 등 실습
         print("Counter incremented to: \(counter)")
+        
+        /*
+         (lldb) po counter                    # 변수 확인
+         (lldb) expr counter = 999           # 변수 수정
+         (lldb) c                            # 계속 실행
+         */
     }
     
     private func decrementCounter() {
