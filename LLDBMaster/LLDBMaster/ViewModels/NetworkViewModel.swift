@@ -18,6 +18,11 @@ class NetworkViewModel: ObservableObject {
     @MainActor
     func fetchData() async {
         print("Starting network request...") // breakpoint 설정
+        /**
+         (lldb) po self.status                    # 상태 확인
+         (lldb) expr self.status = "LLDB 디버깅"  # 상태 수정
+         (lldb) c                                # 계속
+         */
         status = "요청중"
         isLoading = true
         fetchedData = nil
