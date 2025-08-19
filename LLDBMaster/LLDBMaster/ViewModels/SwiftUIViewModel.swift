@@ -15,6 +15,12 @@ class SwiftUIViewModel: ObservableObject {
     func updatePublishedValue() {
         publishedValue = "업데이트됨 \(Date().timeIntervalSince1970)"
         print("Published value updated: \(publishedValue)") // breakpoint 설정
+        
+        /**
+         (lldb) po self.publishedValue                           # 현재 값 확인
+         (lldb) expr self.publishedValue = "LLDB로 변경"         # 강제 수정
+         (lldb) c                                               # 계속 실행
+         */
     }
     
     func incrementCounter() {
