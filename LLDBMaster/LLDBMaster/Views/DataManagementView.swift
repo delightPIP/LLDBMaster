@@ -19,25 +19,25 @@ struct DataManagementView: View {
     var body: some View {
         NavigationView {
             VStack {
+                // Break point, View 로드 시 데이터 상태 확인
+                // (lldb) po tasks.count
+                // (lldb) po users.count
                 Text("SwiftData 디버깅")
                     .font(.title)
                     .padding()
                 
-                // Tasks 섹션
                 TasksSection(
                     tasks: tasks,
                     modelContext: modelContext,
                     showAddTaskSheet: $showAddTaskSheet
                 )
                 
-                // Users 섹션
                 UsersSection(
                     users: users,
                     modelContext: modelContext,
                     showAddUserSheet: $showAddUserSheet
                 )
                 
-                // 관계형 데이터 디버깅
                 RelationshipSection(tasks: tasks, users: users, modelContext: modelContext)
                 
                 Spacer()
