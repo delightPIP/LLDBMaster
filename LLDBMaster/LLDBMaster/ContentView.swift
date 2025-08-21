@@ -52,6 +52,14 @@ struct ContentView: View {
                     Text("Data")
                 }
                 .tag(4)
+            
+            SimpleDebugTestView()
+                .tabItem {
+                        Image(systemName: "6.circle")
+                        Text("실습")
+                }
+                .tag(5)
+            
         }
         .environmentObject(appViewModel)
     }
